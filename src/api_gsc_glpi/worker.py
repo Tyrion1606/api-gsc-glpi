@@ -4,11 +4,11 @@ from __future__ import annotations
 import os
 import time
 
-import caixa_client
-import glpi_client
-import glpi_updates
-import processors
-from anexos import extrair_anexos_do_xml
+from api_gsc_glpi import caixa_client
+from api_gsc_glpi import glpi_client
+from api_gsc_glpi import glpi_updates
+from api_gsc_glpi import processors
+from api_gsc_glpi.anexos import extrair_anexos_do_xml
 
 POLL_INTERVAL_SECONDS = 30
 ENABLE_GLPI_ANEXOS_PARA_CAIXA = os.getenv("ENABLE_GLPI_ANEXOS_PARA_CAIXA", "0").strip() in ("1", "true", "True")
@@ -83,7 +83,7 @@ def executar_loop() -> None:
                 if not req or not wo:
                     continue
                 if not reit_id:
-                    # fallback seguro (não deveria acontecer porque processors gera)
+                    # fallback seguro (nï¿½o deveria acontecer porque processors gera)
                     reit_id = f"fallback_{hash(desc)}"
 
                 # se ja foi aplicada, pula (AGORA POR ID)

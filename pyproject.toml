@@ -8,7 +8,20 @@ packages = [{include = "api_gsc_glpi", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+requests = "^2.32.5"
+xmltodict = "^1.0.4"
+lxml = "^6.0.2"
+pydantic = "^2.12.5"
+tenacity = "^9.1.4"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+pytest-mock = "^3.15.1"
+pytest-cov = "^7.0.0"
+requests-mock = "^1.12.1"
+coverage = "^7.13.4"
+typer = "^0.24.1"
 
 [build-system]
 requires = ["poetry-core"]
