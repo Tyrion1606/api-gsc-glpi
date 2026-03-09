@@ -10,7 +10,7 @@ from typing import Any, Dict, Optional, List
 
 import requests
 
-from config import (
+from api_gsc_glpi.config import (
     GLPI_API_URL,
     GLPI_APP_TOKEN,
     GLPI_USER_TOKEN,

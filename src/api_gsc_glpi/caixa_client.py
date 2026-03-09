@@ -11,7 +11,7 @@ from typing import Optional, List, Dict
 
 import requests
 
-from config import (
+from api_gsc_glpi.config import (
     CAIXA_ENDPOINT,
     CAIXA_USER,
     CAIXA_PASSWORD,
