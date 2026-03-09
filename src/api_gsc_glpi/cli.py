@@ -3,7 +3,6 @@ from time import sleep
 
 import typer
 from api_gsc_glpi.worker import run_cycle
-
 from api_gsc_glpi.config import (
     POLL_INTERVAL_SECONDS
 )
