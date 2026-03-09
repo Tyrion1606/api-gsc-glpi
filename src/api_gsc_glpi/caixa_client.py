@@ -22,7 +22,7 @@ from api_gsc_glpi.config import (
     CAIXA_NOME_FORNECEDOR,
 )
 
-from utils import limpar_texto_xml
+from api_gsc_glpi.utils import limpar_texto_xml
 
 MAX_RETRIES = 3
 BACKOFF_SECONDS = [5, 15, 45]
