@@ -8,7 +8,6 @@ from typing import Dict, Any, Optional
 
 STATE_FILE = "state.json"
 
-
 def _default_state() -> Dict[str, Any]:
     return {
         "mapeamentos": {},
@@ -19,9 +18,9 @@ def _default_state() -> Dict[str, Any]:
         "documentos_enviados": {},
     }
 
-
 def _load_state() -> Dict[str, Any]:
     if not os.path.exists(STATE_FILE):
+        print("Arquivo [state.json] não encontrado!!!")
         return _default_state()
 
     try:

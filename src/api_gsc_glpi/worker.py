@@ -26,7 +26,6 @@ def _detectar_finalizacao_caixa(texto: str) -> str | None:
 
 
 def run_cycle() -> None:
-    """Executa um ciclo completo de integração CAIXA -> GLPI"""
     try:
         # 1) ABERTURAS (CAIXA -> GLPI)
         print("Buscando aberturas na CAIXA...")
