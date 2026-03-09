@@ -1,21 +1,26 @@
 # src/api_gsc_glpi/cli.py
+from time import sleep
 
 import typer
-from .worker import run_cycle  # Função de orquestração do worker
+from api_gsc_glpi.worker import run_cycle
+
+from api_gsc_glpi.config import (
+    POLL_INTERVAL_SECONDS
+)
 
 app = typer.Typer()
 
 @app.command()
 def run():
-    """Rodar o worker em modo contínuo."""
-    typer.echo("Iniciando o ciclo do worker...")
-    run_cycle()  # Aqui a função do seu ciclo de trabalho
+    while True:
+        typer.echo("Iniciando o ciclo do worker...")
+        run_cycle()
+        sleep(POLL_INTERVAL_SECONDS)
 
 @app.command()
 def once():
-    """Rodar apenas um ciclo do worker."""
     typer.echo("Executando um ciclo único...")
-    run_cycle()  # Só uma execução, sem loop infinito
+    run_cycle()
 
 if __name__ == "__main__":
     app()
