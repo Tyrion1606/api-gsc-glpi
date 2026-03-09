@@ -9,7 +9,9 @@ from api_gsc_glpi import glpi_updates
 from api_gsc_glpi import processors
 from api_gsc_glpi.anexos import extrair_anexos_do_xml
 
-# POLL_INTERVAL_SECONDS = 30
+from api_gsc_glpi.config import (
+    POLL_INTERVAL_SECONDS
+)
 ENABLE_GLPI_ANEXOS_PARA_CAIXA = os.getenv("ENABLE_GLPI_ANEXOS_PARA_CAIXA", "0").strip() in ("1", "true", "True")
 
 

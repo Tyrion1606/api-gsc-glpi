@@ -1,0 +1,16 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:urn="urn:GSC_RF010_FornecedorExterno_V401_WS">
+      <soapenv:Header>
+        <urn:AuthenticationInfo>
+          <urn:userName>USR_PETACORP2</urn:userName>
+          <urn:password>PETACORP1234</urn:password>
+        </urn:AuthenticationInfo>
+      </soapenv:Header>
+      <soapenv:Body>
+        <urn:GetList_Reiteracao>
+          <urn:Qualification>CPY000000075749</urn:Qualification>
+          <urn:Token>IDGAA5V0F9OUSATDXCY3TCV2UTGOZL</urn:Token>
+          <urn:Capturado>false</urn:Capturado>
+        </urn:GetList_Reiteracao>
+      </soapenv:Body>
+    </soapenv:Envelope>
